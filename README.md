@@ -1,7 +1,9 @@
 <!-- Banner -->
 <p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:326CE5,100:00ADD8&height=200&section=header&text=Joshua%20Hong&fontSize=70&fontColor=ffffff&animation=fadeIn&desc=Platform%20%2F%20DevOps%20Engineer&descAlignY=62&descSize=22" alt="header"/>
+  <img src="https://capsule-render.vercel.app/api?type=waving&color=0:326CE5,100:00ADD8&height=160&section=header&text=Joshua%20Hong&fontSize=48&fontColor=ffffff&fontAlignY=38&animation=fadeIn" alt="header"/>
 </p>
+
+<h3 align="center">Platform / DevOps Engineer · GitLab &amp; Observability · Kubernetes</h3>
 
 <p align="center">
   <a href="https://github.com/s3onghyun"><img src="https://komarev.com/ghpvc/?username=s3onghyun&label=Profile%20views&color=326CE5&style=flat" alt="profile views"/></a>
@@ -74,10 +76,6 @@ philosophy: "Automate the toil, observe everything, ship safely."
 
 <p align="center">
   <img width="60%" src="https://github-readme-streak-stats.herokuapp.com/?user=s3onghyun&hide_border=true&ring=326CE5&fire=F46800&currStreakLabel=326CE5" alt="streak"/>
-</p>
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=s3onghyun&theme=flat&no-frame=true&column=7&margin-w=5" alt="trophies"/>
 </p>
 
 ---
