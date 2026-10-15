@@ -1,38 +1,56 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="960" height="230" viewBox="0 0 960 230" role="img" aria-labelledby="title desc">
-  <title id="title">A terminal introduction for Seonghyun Hong</title>
-  <desc id="desc">A dark terminal window cycles through whoami, focus, and git status commands.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="620" viewBox="0 0 1120 620" role="img" aria-labelledby="title desc">
+  <title id="title">Seonghyun Hong's animated terminal profile</title>
+  <desc id="desc">A terminal types an introduction, engineering focus, and a neofetch-style profile beside an ASCII portrait.</desc>
   <style>
-    .frame { fill: #0d1117; stroke: #30363d; }
-    .bar { fill: #161b22; }
-    .dot-red { fill: #ff5f56; } .dot-yellow { fill: #ffbd2e; } .dot-green { fill: #27c93f; }
-    .prompt { fill: #3fb950; } .cmd { fill: #e6edf3; } .muted { fill: #8b949e; } .link { fill: #58a6ff; }
-    text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: 16px; }
-    .scene { opacity: 0; animation: scene 12s infinite; }
-    .scene-one { opacity: 1; } .scene-two { animation-delay: 4s; } .scene-three { animation-delay: 8s; }
-    .cursor { fill: #3fb950; animation: blink 1s step-end infinite; }
-    @keyframes scene { 0%, 25% { opacity: 1; } 29%, 100% { opacity: 0; } }
-    @keyframes blink { 50% { opacity: 0; } }
-    @media (prefers-reduced-motion: reduce) { .scene { animation: none; } .scene-one { opacity: 1; } .cursor { animation: none; } }
+    .shell { fill: #0d1117; stroke: #30363d; stroke-width: 2; } .bar { fill: #161b22; }
+    .red { fill: #ff5f56; } .yellow { fill: #ffbd2e; } .green { fill: #27c93f; }
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: 18px; }
+    .small { font-size: 12px; } .prompt { fill: #7ee787; } .command { fill: #f0f6fc; } .muted { fill: #8b949e; }
+    .accent { fill: #58a6ff; } .violet { fill: #d2a8ff; } .warm { fill: #ffa657; }
+    .scene { opacity: 0; animation: scene 18s infinite; } .whoami { opacity: 1; } .focus { animation-delay: 4s; } .fetch { animation-delay: 8s; }
+    .typed { clip-path: inset(0 100% 0 0); animation: typing 1.15s steps(20, end) forwards; }
+    .line { opacity: 0; animation: line-in .35s ease-out forwards; } .whoami .line-a { animation-delay: 1.1s; } .whoami .line-b { animation-delay: 1.55s; }
+    .focus .typed { animation-delay: 4s; } .focus .line-a { animation-delay: 5.05s; } .focus .line-b { animation-delay: 5.38s; } .focus .line-c { animation-delay: 5.71s; }
+    .fetch .typed { animation-delay: 8s; } .fetch .portrait, .fetch .facts { opacity: 0; animation: line-in .5s ease-out 9.1s forwards; }
+    .cursor { fill: #7ee787; animation: blink .9s step-end infinite; }
+    @keyframes scene { 0%, 20% { opacity: 1; } 22.3%, 100% { opacity: 0; } }
+    @keyframes typing { to { clip-path: inset(0 0 0 0); } } @keyframes line-in { to { opacity: 1; } } @keyframes blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .scene, .typed, .line, .fetch .portrait, .fetch .facts { animation: none; } .whoami { opacity: 1; } .whoami .typed, .whoami .line { opacity: 1; clip-path: none; } .cursor { animation: none; } }
   </style>
-  <rect class="frame" x="1" y="1" width="958" height="228" rx="10" />
-  <path class="bar" d="M11 1h938a10 10 0 0 1 10 10v29H1V11A10 10 0 0 1 11 1Z" />
-  <circle class="dot-red" cx="24" cy="21" r="6" /><circle class="dot-yellow" cx="44" cy="21" r="6" /><circle class="dot-green" cx="64" cy="21" r="6" />
-  <text class="muted" x="480" y="26" text-anchor="middle">joshua@github: ~</text>
-  <g class="scene scene-one">
-    <text class="prompt" x="30" y="78">$</text><text class="cmd" x="50" y="78">whoami</text>
-    <text class="link" x="30" y="112">Seonghyun (Joshua) Hong</text><text class="muted" x="270" y="112"> — platform / DevOps engineer</text>
-    <text class="prompt" x="30" y="166">$</text><text class="cmd" x="50" y="166">echo $SHELL</text>
-    <text class="muted" x="30" y="198">/bin/vim</text><rect class="cursor" x="108" y="183" width="9" height="18" />
+  <rect class="shell" x="1" y="1" width="1118" height="618" rx="12" />
+  <path class="bar" d="M13 2h1094a11 11 0 0 1 11 11v42H2V13A11 11 0 0 1 13 2Z" />
+  <circle class="red" cx="28" cy="28" r="7"/><circle class="yellow" cx="51" cy="28" r="7"/><circle class="green" cx="74" cy="28" r="7"/>
+  <text class="muted" x="560" y="35" text-anchor="middle">joshua@github: ~/profile</text>
+
+  <g class="scene whoami">
+    <text class="prompt" x="42" y="108">$</text><text class="command typed" x="68" y="108">whoami</text>
+    <text class="accent line line-a" x="42" y="154">Seonghyun (Joshua) Hong</text><text class="muted line line-a" x="322" y="154"> — platform / DevOps engineer</text>
+    <text class="muted line line-b" x="42" y="192">I build calm paths through complex infrastructure.</text>
+    <text class="prompt" x="42" y="248">$</text><rect class="cursor" x="67" y="230" width="11" height="22" />
   </g>
-  <g class="scene scene-two">
-    <text class="prompt" x="30" y="78">$</text><text class="cmd" x="50" y="78">cat focus</text>
-    <text class="muted" x="30" y="112">gitlab platform · ci/cd · observability</text>
-    <text class="muted" x="30" y="140">kubernetes · cloud-native · open source</text>
-    <text class="prompt" x="30" y="190">$</text><rect class="cursor" x="50" y="175" width="9" height="18" />
+
+  <g class="scene focus">
+    <text class="prompt" x="42" y="108">$</text><text class="command typed" x="68" y="108">cat focus</text>
+    <text class="warm line line-a" x="42" y="158">01</text><text class="muted line line-a" x="90" y="158">GitLab platform and CI/CD</text>
+    <text class="warm line line-b" x="42" y="196">02</text><text class="muted line line-b" x="90" y="196">Observability architecture</text>
+    <text class="warm line line-c" x="42" y="234">03</text><text class="muted line line-c" x="90" y="234">Kubernetes and cloud-native open source</text>
+    <text class="prompt" x="42" y="290">$</text><rect class="cursor" x="67" y="272" width="11" height="22" />
   </g>
-  <g class="scene scene-three">
-    <text class="prompt" x="30" y="78">$</text><text class="cmd" x="50" y="78">git status --short</text>
-    <text class="link" x="30" y="114">M</text><text class="muted" x="54" y="114">making infrastructure calmer, one commit at a time</text>
-    <text class="prompt" x="30" y="176">$</text><text class="cmd" x="50" y="176">_</text><rect class="cursor" x="60" y="161" width="9" height="18" />
+
+  <g class="scene fetch">
+    <text class="prompt" x="42" y="92">$</text><text class="command typed" x="68" y="92">neofetch --profile</text>
+    <g class="portrait accent small">
+      <text x="48" y="126">ygg@gggyy_</text><text x="48" y="140">     _ya@@@ggyg@@@@@@@@@@@@gy_</text><text x="48" y="154">   y@@@@@@@@@@@@@@@@@@@@@@@@@@g_</text><text x="48" y="168"> y@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@_</text><text x="48" y="182">a@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@g</text><text x="48" y="196">a@@@@@@@@@@@T~~@@@@@$@@@@@@@@@@@@@@@L</text><text x="48" y="210">y@@@@@@@@@@@F    0@@@@@@@@@@@@@@@@@@@@L</text><text x="48" y="224">4@@@@@@@@@@@     4@@@@@$$@@@@@@@@g$@@@$</text><text x="48" y="238">4@@@@@@@@@@@     4@$@@@@@@@$@@@@@@@g@@@</text><text x="48" y="252">4@@@@@@@@@@@       $@@@@@@@@@@@@@@@@@@$</text><text x="48" y="266"> @@@@@@@@@@$      =~P@@$@@@@@@@@@@@@@@F</text><text x="48" y="280"> $@@@@@@@@@@@gy_    __y@@@@@@@@@@@@@@@</text><text x="48" y="294"> 4@@@@@@@@~~~@@@g   ~~`~~` ``~~~~@@@@@</text><text x="48" y="308"> a@@@@@@@@@$@gg@@    g@@@gayy_    @@@_</text><text x="48" y="322"> $@@@@@~FR@a*-$@@    $@@@@y``     @@~5</text><text x="48" y="336"> `@@@@@      y@@@     ~@@y`       @@ `</text><text x="48" y="350">  @@@@@     _@@@@      _@@L      4F [</text><text x="48" y="364">  4@@@@,  _g@@@@@     .@@@g      4</text><text x="48" y="378">   ~@@@@ a@@@@@@@@=F~`  ~@@@,    f</text><text x="48" y="392">    $@@F4@@@@@@@y________g@@~</text><text x="48" y="406">    `@@@  4@@@@FF~~~~~~@@@@F    z</text><text x="48" y="420">     "@@@_a@@@@@@g$=_5F` 7~    ,</text><text x="48" y="434">      "@@@@@@@@@@@@~~        y/</text><text x="48" y="448">        ~@@@@~~  `         y$F</text><text x="48" y="462">         4@@@@y_       _yg@F`  l</text><text x="48" y="476">          @@@@@@@@ggygg@@@~    $,</text><text x="48" y="490">          4@@@@@@@@@@@@F~      7Fay</text>
+    </g>
+    <g class="facts">
+      <text class="accent" x="490" y="148">SEONGHYUN HONG</text>
+      <path stroke="#30363d" x1="490" y1="165" x2="1030" y2="165" />
+      <text class="violet" x="490" y="202">role</text><text class="muted" x="620" y="202">Platform / DevOps engineer</text>
+      <text class="violet" x="490" y="240">stack</text><text class="muted" x="620" y="240">GitLab · Kubernetes · Prometheus</text>
+      <text class="violet" x="490" y="266"> </text><text class="muted" x="620" y="266">Grafana · OpenTelemetry</text>
+      <text class="violet" x="490" y="304">editor</text><text class="muted" x="620" y="304">neovim</text>
+      <text class="violet" x="490" y="342">blog</text><text class="accent" x="620" y="342">s3onghyun.github.io</text>
+      <text class="prompt" x="490" y="414">$</text><text class="command" x="516" y="414">git log --oneline --all</text><rect class="cursor" x="794" y="396" width="11" height="22" />
+    </g>
   </g>
 </svg>
