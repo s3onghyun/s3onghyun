@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="230" viewBox="0 0 960 230" role="img" aria-labelledby="title desc">
+  <title id="title">A terminal introduction for Seonghyun Hong</title>
+  <desc id="desc">A dark terminal window cycles through whoami, focus, and git status commands.</desc>
+  <style>
+    .frame { fill: #0d1117; stroke: #30363d; }
+    .bar { fill: #161b22; }
+    .dot-red { fill: #ff5f56; } .dot-yellow { fill: #ffbd2e; } .dot-green { fill: #27c93f; }
+    .prompt { fill: #3fb950; } .cmd { fill: #e6edf3; } .muted { fill: #8b949e; } .link { fill: #58a6ff; }
+    text { font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace; font-size: 16px; }
+    .scene { opacity: 0; animation: scene 12s infinite; }
+    .scene-one { opacity: 1; } .scene-two { animation-delay: 4s; } .scene-three { animation-delay: 8s; }
+    .cursor { fill: #3fb950; animation: blink 1s step-end infinite; }
+    @keyframes scene { 0%, 25% { opacity: 1; } 29%, 100% { opacity: 0; } }
+    @keyframes blink { 50% { opacity: 0; } }
+    @media (prefers-reduced-motion: reduce) { .scene { animation: none; } .scene-one { opacity: 1; } .cursor { animation: none; } }
+  </style>
+  <rect class="frame" x="1" y="1" width="958" height="228" rx="10" />
+  <path class="bar" d="M11 1h938a10 10 0 0 1 10 10v29H1V11A10 10 0 0 1 11 1Z" />
+  <circle class="dot-red" cx="24" cy="21" r="6" /><circle class="dot-yellow" cx="44" cy="21" r="6" /><circle class="dot-green" cx="64" cy="21" r="6" />
+  <text class="muted" x="480" y="26" text-anchor="middle">joshua@github: ~</text>
+  <g class="scene scene-one">
+    <text class="prompt" x="30" y="78">$</text><text class="cmd" x="50" y="78">whoami</text>
+    <text class="link" x="30" y="112">Seonghyun (Joshua) Hong</text><text class="muted" x="270" y="112"> — platform / DevOps engineer</text>
+    <text class="prompt" x="30" y="166">$</text><text class="cmd" x="50" y="166">echo $SHELL</text>
+    <text class="muted" x="30" y="198">/bin/vim</text><rect class="cursor" x="108" y="183" width="9" height="18" />
+  </g>
+  <g class="scene scene-two">
+    <text class="prompt" x="30" y="78">$</text><text class="cmd" x="50" y="78">cat focus</text>
+    <text class="muted" x="30" y="112">gitlab platform · ci/cd · observability</text>
+    <text class="muted" x="30" y="140">kubernetes · cloud-native · open source</text>
+    <text class="prompt" x="30" y="190">$</text><rect class="cursor" x="50" y="175" width="9" height="18" />
+  </g>
+  <g class="scene scene-three">
+    <text class="prompt" x="30" y="78">$</text><text class="cmd" x="50" y="78">git status --short</text>
+    <text class="link" x="30" y="114">M</text><text class="muted" x="54" y="114">making infrastructure calmer, one commit at a time</text>
+    <text class="prompt" x="30" y="176">$</text><text class="cmd" x="50" y="176">_</text><rect class="cursor" x="60" y="161" width="9" height="18" />
+  </g>
+</svg>
